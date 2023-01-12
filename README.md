@@ -14,18 +14,23 @@
 
 ```yaml
 issues:
-  repo: xaoxuu/friends # 仓库持有者/仓库名
-  label: active  # 只能配置1个或留空，留空则所有open的issue都会被抓取。配置1个时，issue只有在具有该标签时才被抓取
+  repo: BeaCox/friendLink # 仓库持有者/仓库名
+  # 第一步筛选，state
+  state: # 留空则从所有issue中抓取，open则从所有open的issue中抓取，closed从所有closed的issue中抓取
+  # 第二步筛选，label
+  label: active  # 只能配置1个或留空，留空则所有满足`state`的issue都会被抓取。配置1个时，issue只有在具有该标签时才被抓取
   groups: # 填写用来分组的label名称。留空则所有被抓取的issue输出至data.json，否则按照输出与组名同名的json文件
   sort: updated-desc # 排序，按最近更新，取消此项则按创建时间排序
 ```
 配置实例说明如下
-| label         | groups                      | 输出文件                | 抓取issue                                         |
-| ------------- | --------------------------- | ----------------------- | ------------------------------------------------- |
-| label: active | groups:                     | data.json               | 所有open的、label包含active的issue                |
-| label: active | groups: ["ordinary", "top"] | ordinary.json, top.json | open的、label包含active且包含ordinary或top的issue |
-| label:        | groups:                     | data.json               | 所有open的issue                                   |
-| label:        | groups: ["ordinary", "top"] | ordinary.json, top.json | open的、label包含ordinary或top的issue             |
+| state         | label         | groups                      | 输出文件                | 抓取issue                                 |
+| ------------- | ------------- | --------------------------- | ----------------------- | ----------------------------------------- |
+| state:        | label: active | groups:                     | data.json               | 所有label包含active的issue                |
+| state:        | label: active | groups: ["ordinary", "top"] | ordinary.json, top.json | label包含active且包含ordinary或top的issue |
+| state:        | label:        | groups:                     | data.json               | 所有issue                                 |
+| state:        | label:        | groups: ["ordinary", "top"] | ordinary.json, top.json | label包含ordinary或top的issue             |
+| state: open   | label: active | groups:                     | data.json               | 所有label包含active的、open的issue        |
+| state: closed | label: active | groups:                     | data.json               | 所有label包含active的、closed的issue      |
 
 2. 打开 action 运行权限。
 

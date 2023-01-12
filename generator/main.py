@@ -26,7 +26,7 @@ def getData(repo,parameter,sort,data_pool,json_pool):
         for number in range(1, 100):
             linklist = []
             print('page:', number)
-            url = 'https://github.com/' + repo + '/issues?page=' + str(number) + '&q=is%3Aopen'
+            url = 'https://github.com/' + repo + '/issues?page=' + str(number) + '&q='
             if parameter:
                 url = url + parameter
             if sort:
@@ -67,7 +67,7 @@ def github_issuse(json_pool):
         # 如果没有配置groups，全部输出至data.json
         data_pool = []
         filenames.append("data")
-        parameter='+label%3A' + (filter["label"] if filter["label"] else '')
+        parameter=(('is%3A'+filter["state"]+'+') if filter["state"] else '')+'label%3A' + (filter["label"] if filter["label"] else '')
         getData(filter["repo"],parameter,filter["sort"],data_pool,json_pool)
 
     else:
@@ -76,7 +76,7 @@ def github_issuse(json_pool):
             print('start of group:', group)
             data_pool = []
             filenames.append(group)
-            parameter='+label%3A' + (filter["label"] if filter["label"] else '') + '+label%3A' + group
+            parameter=(('is%3A'+filter["state"]+'+') if filter["state"] else '')+'label%3A' + (filter["label"] if filter["label"] else '') + '+label%3A' + group
             getData(filter["repo"],parameter,filter["sort"],data_pool,json_pool)
             print("end of group:", group)
 
