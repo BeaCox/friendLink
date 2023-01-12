@@ -2,8 +2,6 @@ name: Generator
 
 on:
   issues:
-    types:
-      - labeled
   watch:
     types: [started]
 
