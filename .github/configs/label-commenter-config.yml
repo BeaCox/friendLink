@@ -30,7 +30,7 @@ labels:
     labeled:
       issue:
         body: |
-          **您的信息不完备，请参考https://bowenyoung.cn/friends/ 按要求填写必要信息。**
+          **您的信息不完备，请参考 https://blog.beacox.space/friends/ 按要求填写必要信息。**
 
           如果您已经填写必要信息，请在评论告知。
           
@@ -41,3 +41,11 @@ labels:
           **您的站点没有开启https。**
 
           请部署SSL证书后开启https，若您已开启https，请在评论告知。
+
+  - name: 'requirements not met'
+    labeled:
+      issue:
+        body: |
+          **抱歉，您的站点没有满足友链添加要求**
+
+          添加要求详见 https://blog.beacox.space/friends/ 。
