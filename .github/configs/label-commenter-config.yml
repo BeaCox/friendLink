@@ -9,6 +9,7 @@ labels:
           稍后片刻刷新网页就可以看到您的链接。
 
           > 如果您的站点信息发生了变动，请直接修改这个 issue 的内容。
+        action: close
 
   - name: 'suspend'
     labeled:
@@ -17,6 +18,7 @@ labels:
           **👋 请及时添加本站友链**
 
           距离成功只剩一步之遥了，请把本站添加到您的友链中，然后再下方评论告知。
+        action: close
 
   - name: '404'
     labeled:
@@ -25,6 +27,7 @@ labels:
           **⚠️ 抱歉，您的网站打不开，或者存在违规信息，现已下架。**
 
           如果您确认可以打开或者已经处理了违规信息，请在下方评论告知，我们会在人工审核通过后恢复上架。
+        action: close
           
   - name: 'need-update'
     labeled:
@@ -33,6 +36,7 @@ labels:
           **您的信息不完备，请参考 https://blog.beacox.space/friends/ 按要求填写必要信息。**
 
           如果您已经填写必要信息，请在评论告知。
+        action: close
           
   - name: 'unsafe'
     labeled:
@@ -41,6 +45,7 @@ labels:
           **您的站点没有开启https。**
 
           请部署SSL证书后开启https，若您已开启https，请在评论告知。
+        action: close
 
   - name: 'requirements not met'
     labeled:
@@ -49,3 +54,4 @@ labels:
           **抱歉，您的站点没有满足友链添加要求**
 
           添加要求详见 https://blog.beacox.space/friends/ 。
+        action: close
