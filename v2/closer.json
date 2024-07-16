@@ -1,0 +1,29 @@
+{
+  "version": "v2",
+  "content": [
+    {
+      "title": "Fgaoxing",
+      "url": "https://www.yt-blog.top",
+      "avatar": "https://npm.elemecdn.com/ytblogimg/webp/big_logo.webp",
+      "screenshot": "",
+      "description": "一个少年的博客",
+      "keywords": ""
+    },
+    {
+      "title": "Steven Lynn's Blog ",
+      "url": "https://blog.stv.lol",
+      "avatar": "https://s2.loli.net/2023/05/29/NXUKtpGBlZoij4T.png",
+      "screenshot": "",
+      "description": "Steven Lynn的个人博客",
+      "keywords": "技术,摄影,杂谈"
+    },
+    {
+      "title": "杜老师说",
+      "url": "https://dusays.com/",
+      "avatar": "https://cdn.dusays.com/avatar.png",
+      "screenshot": "https://bu.dusays.com/2020/11/13/0eccf1ca0dc4b.jpg",
+      "description": "",
+      "keywords": ""
+    }
+  ]
+}
